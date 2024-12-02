@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+$primary-color: white;
+$secondary-color: #9a8a78;
+$primary-font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$border-default: 1px solid #9a8a78;
+$background-color: #262626;
+
+@mixin responsive-img {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: auto; 
+    height: auto; 
+    max-width: auto; 
+    max-height: 100%; 
+    object-fit:fill; 
+}
+
+@mixin h2 {
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 2rem;
+    min-height: 7rem;
+    background: transparent;
+    color: $primary-color;
+
+    .logo-div {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    nav {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        a:last-child {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+body {
+    position: relative;
+    color: $primary-color;
+    font-family: $primary-font;
+    scroll-behavior: smooth;
+}
+
+// Main
+main::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/background-image-2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6) saturate(0.7) contrast(0.9);
+    z-index: -1;
+    pointer-events: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 180rem;
+
+    .first-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Corrected alignment for consistency
+        position: absolute;
+        top: 20rem;
+        gap: 1rem;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 25px;
+            text-align: center;
+        }
+    }
+    
+    // SECOND SECTION
+
+    .second-section{
+    background-color: $background-color;
+    height: auto;
+    width: 100%;
+    min-width: 55rem;
+    margin-top: 45rem;
+    .grid-container-inner {
+        display: grid;
+        grid-gap:1px;
+        padding: 5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-item{
+        box-shadow:0 0 0 1px $secondary-color;
+        min-height: 10rem;        
+    }
+    .item1{
+        grid-column: 1 /span 2;
+        grid-row: 1;
+        overflow: hidden;
+        position: relative; // Set relative positioning to center the image.
+        img{
+            @include responsive-img;
+        }
+        
+    }
+    .item2{
+        display: flex;
+        flex-direction: column;
+        grid-column: 3 /span 2;
+        grid-row: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 1rem;
+
+        h2{
+            @include h2;
+        }
+
+        ul{
+            li{
+                list-style-type: disc;
+                margin-bottom: 8px;
+            }
+        }
+        
+
+    }
+    .item1, .item2{
+        height: 700px;
+    }
+
+    .item3, .item4, .item5, .item6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 287px;
+        gap: 1rem;
+
+        p{
+            // HERE
+        }
+
+        svg{
+            width: 4rem !important;
+            height: 4rem !important;
+        }
+    }
+    .item7{
+        grid-column: 1 /span 2;
+        grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 2rem;
+        padding: 0 5rem;
+
+        h2{ 
+            @include h2;
+        }
+        h3{
+            font-size: 25px;
+            color: #9a8a78;
+        }
+
+        p{
+            line-height: 1.8;
+        }
+        
+        h2, h3, p{
+            width: 100%;
+        }
+    }
+    .item8{
+        grid-column: 3 /span 2;
+        grid-row: 3;
+        overflow: hidden;
+        position: relative; 
+        img{
+            @include responsive-img;
+            max-height: 120%; 
+        }
+    }
+    .item7, .item8{
+        display: flex;
+        height:651px;
+    }
+}
+    
+// SECOND SECTION END
+}
+
+// THIRD SECTION 
+
+.third-section{
+    height: auto;
+    width: 100%;
+    padding: 0 5rem;
+    background-color: #262626;
+    .img-gallery-div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .img1{
+        border: $border-default;
+        width: 218px;
+        height: 270px;
+    }
+    .img2{
+        border: $border-default;
+        width: 177px;
+        height: 154px;
+    }
+    .img3{
+        border: $border-default;
+        // width: 177px;
+        // height: 154px;
+        grid-column: 3;
+        grid-row: 1/ span 3;
+    }
+    .img4{
+        border: $border-default;
+        // width: 177px;
+        // height: 154px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+// SIDE ATTACHMENTS
+.socials-parent {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2rem;
+    bottom: 4rem;
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .fb-div,
+        .insta-div,
+        .yelp-div {
+            font-size: 24px;
+            color: $primary-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $secondary-color; // Added hover effect for social icons
+            }
+        }
+    }
+}
+
+.chat-parent {
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    z-index: 10; 
+
+    .chat-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        height: 3rem;
+        width: 12rem; 
+        border: none;
+        border-radius: 6rem;
+        background-color: $secondary-color;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        color: $background-color; 
+    }
+}
