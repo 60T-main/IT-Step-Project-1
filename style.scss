@@ -29,6 +29,11 @@ $background-color: #262626;
     font-size: 35px;
 }
 
+@mixin h3{
+    font-size: 25px;
+    color: #9a8a78;
+}
+
 header {
     display: flex;
     justify-content: space-between; 
@@ -52,6 +57,11 @@ header {
         a:last-child {
             border: 1px solid white;
             padding: 10px;
+        }
+        a:last-child:hover {
+            border: 1px solid #B3A89A;
+            padding: 10px;
+            color: #B3A89A;
         }
 
         a {
@@ -233,59 +243,92 @@ main {
     width: 100%;
     padding: 0 5rem;
     background-color: #262626;
+    .recent-projects-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+        font-size: 25px;
+        @include h2;
+    }
     .img-gallery-div{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(12, 1fr);
         overflow: hidden;
-        position: absolute;
-        // inset: 938.121px auto auto 0px;
+        // position: absolute;
         margin: 0px;
         padding: 0 5rem 0 0;
         width: auto;
-        height: auto;
+        height: 25rem;
         transition: opacity 0.2s;
         opacity: 1;
-        // display: block;
-        // justify-content: center;
     }
     .img1{
         border: $border-default;
         width: 218px;
         height: 270px;
-        // display: flex;
+        overflow: hidden;
+        position: relative; 
+        grid-column: span 4;
+        grid-row: span 2;
+        img{
+            
+            max-height: 105%; 
+            width: 100%;
+            
+        }
+        
     }
     .img2{
         border: $border-default;
         width: 177px;
         height: 154px;
+        overflow: hidden;
+        position: relative; 
+        grid-column: span 4;
+        img{
+        
+            max-height: 105%; 
+            width: 100%;
+            
+        }
     }
     .img3{
         border: $border-default;
         width: 177px;
         height: 196px;
-        grid-column: 2;
-        grid-row: 2;
+        grid-column: span 4;
         overflow: hidden;
         position: relative; 
         img{
-
+        
+            max-height: 105%; 
+            width: 100%;
+            
         }
     }
     .img4{
         border: $border-default;
         width: 184px;
         height: 123px;
-        grid-column: 1;
-        grid-row: 2;
+        grid-column: span 8;
+        grid-row: span 2;
+        overflow: hidden;
+        position: relative; 
+        img{
+        
+            max-height: 105%; 
+            width: 100%;
+            
+        }
     }
     .img5{
         border: $border-default;
-
         width: 628px;
         height: 410px;
-        grid-column: 3;
-        grid-row: 1/ span 3;
-        
+        grid-column: span 4;
+        overflow: hidden;
+        position: relative; 
         img{
             // @include responsive-img;
             max-height: 105%; 
@@ -296,6 +339,46 @@ main {
 
     img{
         cursor: pointer;
+    }
+}
+
+// FOURTH SECTION
+.fourth-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+    width: 100%;
+    padding: 0 5rem;
+    background-color: #262626;
+    .testimonials-parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: $border-default;
+        height: 25rem;
+        .testimonials{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: $border-default;
+            height: 25rem;
+            padding: 0 6rem;
+            text-align: left;
+            gap: 1rem;
+            h3{
+                @include h3;
+                font-weight: 200;
+            }
+            h1{
+                font-size: 35px;
+                font-weight: 100;
+            }
+            p{
+                line-height: 25px;
+            }
+        }
     }
 }
 }
