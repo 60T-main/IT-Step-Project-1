@@ -19,8 +19,8 @@ $background-color: #262626;
     transform: translate(-50%, -50%); 
     width: auto; 
     height: auto; 
-    max-width: auto; 
-    max-height: 100%; 
+    max-width: 120%; 
+    max-height: 120%; 
     object-fit: fill; 
 }
 
@@ -367,6 +367,7 @@ main {
             padding: 0 6rem;
             text-align: left;
             gap: 1rem;
+            overflow: hidden;
             h3{
                 @include h3;
                 font-weight: 200;
@@ -381,6 +382,49 @@ main {
         }
     }
 }
+}
+
+// FIFTH SECTION
+.fifth-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        height: 40rem;
+        width: 100%;
+        background-color: #262626;
+        padding: 0 5rem;
+        .contact-form{
+            form{
+                .name-input-div{
+                }
+            }
+        }
+        .contact-text{
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            h3{
+                @include h3;
+                letter-spacing: 0.2rem;
+                font-size: 35px;
+            }
+            p{
+                @include h3;
+                font-size: 16px; 
+                line-break: auto;
+            }
+            svg{
+                width: 2rem;
+                height: 2rem;
+            }
+            .address-div{
+                display: flex;
+                align-items: center;
+                height: 4rem;
+                gap: 1.5rem;
+            }
+        }
 }
 
 
