@@ -193,7 +193,6 @@ main .second-section .item8 img {
   max-height: 120%;
   -o-object-fit: fill;
      object-fit: fill;
-  max-height: 120%;
 }
 main .second-section .item7, main .second-section .item8 {
   display: flex;
@@ -329,8 +328,7 @@ main .fourth-section .testimonials-parent .testimonials h1 {
 main .fourth-section .testimonials-parent .testimonials p {
   line-height: 25px;
 }
-
-.fifth-section {
+main .fifth-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,32 +338,62 @@ main .fourth-section .testimonials-parent .testimonials p {
   background-color: #262626;
   padding: 0 5rem;
 }
-.fifth-section .contact-text {
+main .fifth-section .contact-text {
   display: flex;
   flex-direction: column;
   width: 20rem;
 }
-.fifth-section .contact-text h3 {
+main .fifth-section .contact-text h3 {
   font-size: 25px;
   color: #9a8a78;
   letter-spacing: 0.2rem;
   font-size: 35px;
 }
-.fifth-section .contact-text p {
+main .fifth-section .contact-text p {
   font-size: 25px;
   color: #9a8a78;
   font-size: 16px;
   line-break: auto;
 }
-.fifth-section .contact-text svg {
+main .fifth-section .contact-text svg {
   width: 2rem;
   height: 2rem;
 }
-.fifth-section .contact-text .address-div {
+main .fifth-section .contact-text .address-div {
   display: flex;
   align-items: center;
   height: 4rem;
   gap: 1.5rem;
+}
+main .fifth-section form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .fifth-section form div {
+  border: 1px solid white;
+  padding: 2rem;
+}
+main .fifth-section form .text-input {
+  display: flex;
+  flex-direction: column;
+  color: #9a8a78;
+}
+main .fifth-section form input[type=text] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9a8a78;
+}
+main .fifth-section form .name-input {
+  grid-column: 1;
+  grid-row: 1;
+}
+main .fifth-section form .email-input {
+  grid-column: 1/span 2;
+  grid-row: 2;
+}
+main .fifth-section form .submit-input {
+  grid-column: 1/span 2;
+  grid-row: 4;
 }
 
 .socials-parent {

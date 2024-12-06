@@ -144,6 +144,7 @@ main {
         position: relative; // Set relative positioning to center the image.
         img{
             @include responsive-img;
+            
         }
         
     }
@@ -181,10 +182,6 @@ main {
         align-items: center;
         height: 287px;
         gap: 1rem;
-
-        p{
-            // HERE //
-        }
 
         svg{
             width: 4rem !important;
@@ -225,7 +222,7 @@ main {
         position: relative; 
         img{
             @include responsive-img;
-            max-height: 120%; 
+            
         }
     }
     .item7, .item8{
@@ -382,50 +379,80 @@ main {
         }
     }
 }
-}
 
 // FIFTH SECTION
 .fifth-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 40rem;
+    width: 100%;
+    background-color: #262626;
+    padding: 0 5rem;
+    .contact-text{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-between;
-        height: 40rem;
-        width: 100%;
-        background-color: #262626;
-        padding: 0 5rem;
-        .contact-form{
-            form{
-                .name-input-div{
-                }
-            }
+        flex-direction: column;
+        width: 20rem;
+        h3{
+            @include h3;
+            letter-spacing: 0.2rem;
+            font-size: 35px;
         }
-        .contact-text{
+        p{
+            @include h3;
+            font-size: 16px; 
+            line-break: auto;
+        }
+        svg{
+            width: 2rem;
+            height: 2rem;
+        }
+        .address-div{
             display: flex;
-            flex-direction: column;
-            width: 20rem;
-            h3{
-                @include h3;
-                letter-spacing: 0.2rem;
-                font-size: 35px;
+            align-items: center;
+            height: 4rem;
+            gap: 1.5rem;
+        }
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            div{
+                border: 1px solid white;
+                padding: 2rem;
             }
-            p{
-                @include h3;
-                font-size: 16px; 
-                line-break: auto;
-            }
-            svg{
-                width: 2rem;
-                height: 2rem;
-            }
-            .address-div{
+            .text-input{
                 display: flex;
-                align-items: center;
-                height: 4rem;
-                gap: 1.5rem;
+                flex-direction: column;
+                color: $secondary-color;
+            }
+
+            input[type=text]{
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $secondary-color;
+            }
+
+            .name-input{
+                grid-column: 1;
+                grid-row: 1;
+
+            }
+            .email-input{
+                grid-column: 1 / span 2;
+                grid-row: 2;
+            }
+            .submit-input{
+                grid-column: 1 / span 2;
+                grid-row: 4;
             }
         }
+    }
 }
+
+
+
 
 
 
