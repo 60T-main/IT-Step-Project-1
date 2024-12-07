@@ -199,7 +199,7 @@ main .second-section .item7, main .second-section .item8 {
   height: 651px;
 }
 main .third-section {
-  height: 40rem;
+  height: 60rem;
   width: 100%;
   padding: 0 5rem;
   background-color: #262626;
@@ -209,85 +209,52 @@ main .third-section .recent-projects-text {
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
-  font-size: 25px;
+}
+main .third-section .recent-projects-text h2 {
   letter-spacing: 5px;
   font-size: 35px;
+  font-size: 40px;
 }
 main .third-section .img-gallery-div {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   overflow: hidden;
   margin: 0px;
   padding: 0 5rem 0 0;
-  width: auto;
-  height: 25rem;
+  width: 100%;
+  height: 100%;
   transition: opacity 0.2s;
   opacity: 1;
 }
-main .third-section .img1 {
-  border: 1px solid #9a8a78;
-  width: 218px;
-  height: 270px;
-  overflow: hidden;
-  position: relative;
-  grid-column: span 4;
-  grid-row: span 2;
-}
-main .third-section .img1 img {
-  max-height: 105%;
+main .third-section .img-gallery-div img {
   width: 100%;
-}
-main .third-section .img2 {
-  border: 1px solid #9a8a78;
-  width: 177px;
-  height: 154px;
-  overflow: hidden;
-  position: relative;
-  grid-column: span 4;
-}
-main .third-section .img2 img {
-  max-height: 105%;
-  width: 100%;
-}
-main .third-section .img3 {
-  border: 1px solid #9a8a78;
-  width: 177px;
-  height: 196px;
-  grid-column: span 4;
-  overflow: hidden;
-  position: relative;
-}
-main .third-section .img3 img {
-  max-height: 105%;
-  width: 100%;
-}
-main .third-section .img4 {
-  border: 1px solid #9a8a78;
-  width: 184px;
-  height: 123px;
-  grid-column: span 8;
-  grid-row: span 2;
-  overflow: hidden;
-  position: relative;
-}
-main .third-section .img4 img {
-  max-height: 105%;
-  width: 100%;
-}
-main .third-section .img5 {
-  border: 1px solid #9a8a78;
-  width: 628px;
-  height: 410px;
-  grid-column: span 4;
-  overflow: hidden;
-  position: relative;
-}
-main .third-section .img5 img {
-  max-height: 105%;
-  width: 100%;
-}
-main .third-section img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   cursor: pointer;
+}
+main .third-section .img-gallery-div #img1 {
+  grid-column: span 4;
+  grid-row: span 8;
+}
+main .third-section .img-gallery-div #img2 {
+  grid-column: 6/span 4;
+  grid-row: span 6;
+}
+main .third-section .img-gallery-div #img3 {
+  grid-column: 6/span 4;
+  grid-row: 8/span 8;
+}
+main .third-section .img-gallery-div #img4 {
+  grid-column: span 4;
+  grid-row: 10/span 6;
+}
+main .third-section .img-gallery-div #img5 {
+  grid-column: 11/span 10;
+  grid-row: 1/span 15;
 }
 main .fourth-section {
   display: flex;
