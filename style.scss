@@ -6,6 +6,8 @@
     list-style: none;
 }
 
+a { color: inherit; } 
+
 $primary-color: white;
 $secondary-color: #9a8a78;
 $primary-font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -343,7 +345,8 @@ main {
     width: 100%;
     background-color: #262626;
     padding: 0 5rem;
-    .contact-text{
+        // 1
+        .contact-text{
         display: flex;
         flex-direction: column;
         width: 20rem;
@@ -351,6 +354,7 @@ main {
             @include h3;
             letter-spacing: 0.2rem;
             font-size: 35px;
+            margin-bottom: 3rem;
         }
         p{
             @include h3;
@@ -368,20 +372,21 @@ main {
             gap: 1.5rem;
         }
         }
+        // 2
         form{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             div{
-                border: 1px solid white;
                 padding: 2rem;
             }
             .text-input{
                 display: flex;
                 flex-direction: column;
                 color: $secondary-color;
+                gap:0.8rem;
             }
 
-            input[type=text]{
+            input[type=text],[type=email],[type=number]{
                 background-color: transparent;
                 border: none;
                 border-bottom: 1px solid $secondary-color;
@@ -399,6 +404,32 @@ main {
             .submit-input{
                 grid-column: 1 / span 2;
                 grid-row: 4;
+                #submit{
+                    width: 100%;
+                    height: 3rem;
+                    background-color: transparent;
+                    color: $secondary-color;
+                    border: 1px solid $secondary-color;
+                }
+            }
+        }
+
+        // 3
+        .contact-menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            gap: 1rem;
+            height: 25rem;
+            width: 15rem;
+            color: $secondary-color;
+            #callnow{
+                width: 50%;
+                margin-top: 2rem;
+                height: 2.5rem;
+                background-color: $secondary-color;
+                border: $border-default;
+                color: $background-color;
             }
         }
     }

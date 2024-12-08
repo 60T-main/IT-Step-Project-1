@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+a {
+  color: inherit;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -315,6 +319,7 @@ main .fifth-section .contact-text h3 {
   color: #9a8a78;
   letter-spacing: 0.2rem;
   font-size: 35px;
+  margin-bottom: 3rem;
 }
 main .fifth-section .contact-text p {
   font-size: 25px;
@@ -337,15 +342,15 @@ main .fifth-section form {
   grid-template-columns: repeat(2, 1fr);
 }
 main .fifth-section form div {
-  border: 1px solid white;
   padding: 2rem;
 }
 main .fifth-section form .text-input {
   display: flex;
   flex-direction: column;
   color: #9a8a78;
+  gap: 0.8rem;
 }
-main .fifth-section form input[type=text] {
+main .fifth-section form input[type=text], main .fifth-section form [type=email], main .fifth-section form [type=number] {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9a8a78;
@@ -361,6 +366,30 @@ main .fifth-section form .email-input {
 main .fifth-section form .submit-input {
   grid-column: 1/span 2;
   grid-row: 4;
+}
+main .fifth-section form .submit-input #submit {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  color: #9a8a78;
+  border: 1px solid #9a8a78;
+}
+main .fifth-section .contact-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1rem;
+  height: 25rem;
+  width: 15rem;
+  color: #9a8a78;
+}
+main .fifth-section .contact-menu #callnow {
+  width: 50%;
+  margin-top: 2rem;
+  height: 2.5rem;
+  background-color: #9a8a78;
+  border: 1px solid #9a8a78;
+  color: #262626;
 }
 
 .socials-parent {
