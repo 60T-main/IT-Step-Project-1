@@ -207,6 +207,8 @@ main .third-section {
   width: 100%;
   padding: 0 5rem;
   background-color: #262626;
+  position: relative;
+  z-index: 1;
 }
 main .third-section .recent-projects-text {
   display: flex;
@@ -228,8 +230,6 @@ main .third-section .img-gallery-div {
   padding: 0 5rem 0 0;
   width: 100%;
   height: 100%;
-  transition: opacity 0.2s;
-  opacity: 1;
 }
 main .third-section .img-gallery-div img {
   width: 100%;
@@ -238,7 +238,32 @@ main .third-section .img-gallery-div img {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  border: 1px solid #9a8a78;
+}
+main .third-section .img-gallery-div .project-imgs {
+  position: relative;
+}
+main .third-section .img-gallery-div .project-imgs .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: white;
+  opacity: 0;
   cursor: pointer;
+}
+main .third-section .img-gallery-div .project-imgs .overlay p {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+main .third-section .img-gallery-div .project-imgs .overlay:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.555);
 }
 main .third-section .img-gallery-div #img1 {
   grid-column: span 4;
@@ -259,6 +284,31 @@ main .third-section .img-gallery-div #img4 {
 main .third-section .img-gallery-div #img5 {
   grid-column: 11/span 10;
   grid-row: 1/span 15;
+}
+main .third-section .view-all-div {
+  display: flex;
+  background-color: white !important;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .third-section .view-all-div .view-all-btn {
+  width: 14rem;
+  height: 4rem;
+  background-color: #9a8a78;
+  border: none;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+main .third-section .view-all-div .view-all-btn:hover {
+  background-color: rgba(154, 138, 120, 0.8078431373);
 }
 main .fourth-section {
   display: flex;
@@ -398,6 +448,7 @@ main .fifth-section .contact-menu #callnow {
   position: fixed;
   left: 2rem;
   bottom: 4rem;
+  z-index: 10;
 }
 .socials-parent .socials {
   display: flex;
@@ -410,11 +461,6 @@ main .fifth-section .contact-menu #callnow {
   font-size: 24px;
   color: white;
   cursor: pointer;
-}
-.socials-parent .socials .fb-div:hover,
-.socials-parent .socials .insta-div:hover,
-.socials-parent .socials .yelp-div:hover {
-  color: #9a8a78;
 }
 
 .chat-parent {
