@@ -134,15 +134,33 @@ main .second-section .item2 {
   align-items: center;
   justify-content: center;
   text-align: left;
-  gap: 1rem;
+  margin-left: -6rem;
+  gap: 1.5rem;
 }
 main .second-section .item2 h2 {
   letter-spacing: 5px;
   font-size: 35px;
 }
+main .second-section .item2 ul {
+  margin-left: -2rem;
+}
 main .second-section .item2 ul li {
   list-style-type: disc;
-  margin-bottom: 8px;
+  padding-bottom: 10px;
+}
+main .second-section .item2 button {
+  width: 16rem;
+  height: 4rem;
+  background-color: #9a8a78;
+  border: none;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+main .second-section .item2 button:hover {
+  background-color: rgba(154, 138, 120, 0.8078431373);
 }
 main .second-section .item1, main .second-section .item2 {
   height: 700px;
@@ -206,7 +224,7 @@ main .second-section .item7, main .second-section .item8 {
   height: 651px;
 }
 main .third-section {
-  height: 60rem;
+  height: auto;
   width: 100%;
   padding: 0 5rem;
   background-color: #262626;
@@ -227,12 +245,12 @@ main .third-section .recent-projects-text h2 {
 main .third-section .img-gallery-div {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-rows: repeat(18, 1fr);
   overflow: hidden;
   margin: 0px;
-  padding: 0 5rem 0 0;
   width: 100%;
   height: 100%;
+  min-height: 20rem;
 }
 main .third-section .img-gallery-div img {
   width: 100%;
@@ -288,19 +306,14 @@ main .third-section .img-gallery-div #img5 {
   grid-column: 11/span 10;
   grid-row: 1/span 15;
 }
-main .third-section .view-all-div {
+main .third-section .img-gallery-div .view-all-div {
   display: flex;
-  background-color: white !important;
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  grid-column: 9/span 5;
+  grid-row: 15/span 2;
+  z-index: 1;
 }
-main .third-section .view-all-div .view-all-btn {
-  width: 14rem;
+main .third-section .img-gallery-div .view-all-div .view-all-btn {
+  width: 16rem;
   height: 4rem;
   background-color: #9a8a78;
   border: none;
@@ -310,7 +323,7 @@ main .third-section .view-all-div .view-all-btn {
   cursor: pointer;
   transition: 0.4s;
 }
-main .third-section .view-all-div .view-all-btn:hover {
+main .third-section .img-gallery-div .view-all-div .view-all-btn:hover {
   background-color: rgba(154, 138, 120, 0.8078431373);
 }
 main .fourth-section {
@@ -444,8 +457,7 @@ main .fifth-section .contact-menu #callnow {
   border: 1px solid #9a8a78;
   color: #262626;
 }
-
-.socials-parent {
+main .socials-parent {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -453,26 +465,25 @@ main .fifth-section .contact-menu #callnow {
   bottom: 4rem;
   z-index: 10;
 }
-.socials-parent .socials {
+main .socials-parent .socials {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.socials-parent .socials .fb-div,
-.socials-parent .socials .insta-div,
-.socials-parent .socials .yelp-div {
+main .socials-parent .socials .fb-div,
+main .socials-parent .socials .insta-div,
+main .socials-parent .socials .yelp-div {
   font-size: 24px;
   color: white;
   cursor: pointer;
 }
-
-.chat-parent {
+main .chat-parent {
   position: fixed;
   right: 2rem;
   bottom: 4rem;
   z-index: 10;
 }
-.chat-parent .chat-button {
+main .chat-parent .chat-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,4 +498,41 @@ main .fifth-section .contact-menu #callnow {
   font-size: 16px;
   font-weight: bold;
   color: #262626;
+}
+
+@media (max-width: 1120px) {
+  main .third-section {
+    height: 100rem;
+  }
+  main .third-section .img-gallery-div {
+    grid-template-rows: repeat(18, 1fr);
+  }
+  main .third-section .img-gallery-div #img1 {
+    grid-column: 1/span 9;
+    grid-row: 1/span 5;
+  }
+  main .third-section .img-gallery-div #img2 {
+    grid-column: 11/span 10;
+    grid-row: span 4;
+  }
+  main .third-section .img-gallery-div #img3 {
+    grid-column: 11/span 10;
+    grid-row: 6/span 4;
+  }
+  main .third-section .img-gallery-div #img4 {
+    grid-column: 1/span 9;
+    grid-row: 7/span 3;
+  }
+  main .third-section .img-gallery-div #img5 {
+    grid-column: 1/span 20;
+    grid-row: 11/span 6;
+  }
+  main .third-section .img-gallery-div .view-all-div {
+    display: flex;
+    grid-column: 9/span 5;
+    grid-row: 16/span 2;
+    width: 16rem;
+    height: 4rem;
+    margin-top: 5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -31,6 +31,21 @@ $background-color: #262626;
     object-fit: cover; 
 }
 
+@mixin default-button{
+    width: 16rem;
+    height: 4rem;
+    background-color: $secondary-color;
+    border: none;
+    font-family: $primary-font;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+    background-color:#9a8a78ce; 
+    }
+}
+
 @mixin h2 {
     letter-spacing: 5px;
     font-size: 35px;
@@ -167,17 +182,23 @@ main {
         align-items: center;
         justify-content: center;
         text-align: left;
-        gap: 1rem;
+        margin-left: -6rem;
+        gap: 1.5rem;
 
         h2{
             @include h2;
         }
 
-        ul{
+        ul{ 
+            margin-left: -2rem;
             li{
                 list-style-type: disc;
-                margin-bottom: 8px;
+                padding-bottom: 10px;
             }
+        }
+
+        button{
+            @include default-button;
         }
         
 
@@ -246,7 +267,7 @@ main {
 
 // THIRD SECTION 
 .third-section{
-    height: 60rem;
+    height: auto;
     width: 100%;
     padding: 0 5rem;
     background-color: #262626;
@@ -265,13 +286,13 @@ main {
     .img-gallery-div{
         display: grid;
         grid-template-columns: repeat(20 ,1fr);
-        grid-template-rows: repeat(20 ,1fr);
+        grid-template-rows: repeat(18 ,1fr);
         // gap: 1rem;
         overflow: hidden;
         margin: 0px;
-        padding: 0 5rem 0 0;
         width: 100%;
         height: 100%;
+        min-height: 20rem;
         img{
             width: 100%;
             height: 100%;
@@ -326,32 +347,18 @@ main {
             grid-column: 11 / span 10;
             grid-row: 1 / span 15;
         }
-    }
-
-    .view-all-div{
-        display: flex;
-        background-color: white !important;
-        position: absolute;
-        bottom: -1rem;
-        left: 0; 
-        right: 0; 
-        margin-inline: auto; 
-        width: fit-content;
-        .view-all-btn{
-            width: 14rem;
-            height: 4rem;
-            background-color: $secondary-color;
-            border: none;
-            font-family: $primary-font;
-            font-size: 14px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: 0.4s;
-            &:hover {
-                background-color:#9a8a78ce; 
+        .view-all-div{
+            display: flex;
+            grid-column: 9/ span 5;
+            grid-row: 15 / span 2;
+            z-index: 1;
+            .view-all-btn{
+                @include default-button;
             }
         }
     }
+
+
 
 }
 
@@ -494,7 +501,7 @@ main {
             }
         }
     }
-}
+
 
 
 
@@ -547,28 +554,50 @@ main {
         color: $background-color; 
     }
 }
+}
 
 
 //TABLET MEDIA
 
 
-// @media (max-width: 1200px) {
-//     .second-section
-//         .grid-container-inner 
-//         .item1 
-//             img{
-//                 @include responsive-img;
-//                 max-height: 160% !important;
-//                 max-width: 160% !important;
-                
-//             }
-        
-// }
-
-    
+@media (max-width: 1120px) {
 
 
-//MOBILE MEDIA
-@media (min-width: 768px) {
-    
+    main{
+    .third-section{
+        height:100rem;
+    .img-gallery-div {
+        grid-template-rows: repeat(18,1fr);
+    #img1{
+        grid-column: 1 / span 9;
+        grid-row: 1 / span 5;
+    }
+    #img2{
+        grid-column: 11 / span 10;
+        grid-row: span 4;
+    }
+    #img3{
+        grid-column: 11 / span 10;
+        grid-row: 6 / span 4;
+    }
+    #img4{
+        grid-column: 1 / span 9;
+        grid-row: 7 / span 3;
+    }
+    #img5{
+        grid-column: 1 / span 20;
+        grid-row: 11 / span 6;
+    }
+    .view-all-div{
+        display: flex;
+        grid-column: 9/ span 5;
+        grid-row: 16 / span 2;
+        width: 16rem;
+        height: 4rem;
+        margin-top: 5rem;
+    }
+
+}  
+}
+}
 }
