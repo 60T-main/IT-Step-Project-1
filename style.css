@@ -46,6 +46,12 @@ header nav a:last-child:hover {
 header nav a {
   color: white;
 }
+header .hamburger-div {
+  display: none;
+}
+header .callnow-div {
+  display: none;
+}
 
 body {
   position: relative;
@@ -162,10 +168,14 @@ main .second-section .item2 button {
 main .second-section .item2 button:hover {
   background-color: rgba(154, 138, 120, 0.8078431373);
 }
-main .second-section .item1, main .second-section .item2 {
+main .second-section .item1,
+main .second-section .item2 {
   height: 700px;
 }
-main .second-section .item3, main .second-section .item4, main .second-section .item5, main .second-section .item6 {
+main .second-section .item3,
+main .second-section .item4,
+main .second-section .item5,
+main .second-section .item6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,7 +183,10 @@ main .second-section .item3, main .second-section .item4, main .second-section .
   height: 287px;
   gap: 1rem;
 }
-main .second-section .item3 svg, main .second-section .item4 svg, main .second-section .item5 svg, main .second-section .item6 svg {
+main .second-section .item3 svg,
+main .second-section .item4 svg,
+main .second-section .item5 svg,
+main .second-section .item6 svg {
   width: 4rem !important;
   height: 4rem !important;
 }
@@ -199,7 +212,9 @@ main .second-section .item7 h3 {
 main .second-section .item7 p {
   line-height: 1.8;
 }
-main .second-section .item7 h2, main .second-section .item7 h3, main .second-section .item7 p {
+main .second-section .item7 h2,
+main .second-section .item7 h3,
+main .second-section .item7 p {
   width: 100%;
 }
 main .second-section .item8 {
@@ -219,7 +234,8 @@ main .second-section .item8 img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .second-section .item7, main .second-section .item8 {
+main .second-section .item7,
+main .second-section .item8 {
   display: flex;
   height: 651px;
 }
@@ -416,7 +432,9 @@ main .fifth-section form .text-input {
   color: #9a8a78;
   gap: 0.8rem;
 }
-main .fifth-section form input[type=text], main .fifth-section form [type=email], main .fifth-section form [type=number] {
+main .fifth-section form input[type=text],
+main .fifth-section form [type=email],
+main .fifth-section form [type=number] {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9a8a78;
@@ -534,5 +552,47 @@ main .chat-parent .chat-button {
     width: 16rem;
     height: 4rem;
     margin-top: 5rem;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    min-height: 7rem;
+    background: #262626;
+    width: 100%;
+    color: white;
+  }
+  header .logo-div {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  header nav {
+    display: none;
+  }
+  header .hamburger-div {
+    display: flex;
+  }
+  header .hamburger-div .fa-bars {
+    font-size: 2rem;
+  }
+  body .callnow-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #262626;
+    border-bottom: 1px solid white;
+  }
+  body .callnow-div p {
+    text-align: center;
+  }
+  body .first-h1 h1 {
+    text-align: center;
+    font-size: 35px;
   }
 }/*# sourceMappingURL=style.css.map */
