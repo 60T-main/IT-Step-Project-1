@@ -65,48 +65,62 @@ $background-color: #262626;
 // HEADER
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 2rem;
     min-height: 7rem;
     background: transparent;
     width: 100%;
     color: $primary-color;
 
-    .logo-div {
-        display: flex;
-        flex-direction: column;
-        font-size: 18px;
+    .upper-header {
+        display: none;
     }
 
-    nav {
+    .lower-header {
         display: flex;
-        gap: 15px;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 2rem;
+        min-height: 7rem;
+        background: transparent;
+        width: 100%;
+        color: $primary-color;
 
-        a:last-child {
-            border: 1px solid white;
-            padding: 10px;
+        .logo-div {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
         }
 
-        a:last-child:hover {
-            border: 1px solid #B3A89A;
-            padding: 10px;
-            color: #B3A89A;
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            a:last-child {
+                border: 1px solid white;
+                padding: 10px;
+            }
+
+            a:last-child:hover {
+                border: 1px solid #B3A89A;
+                padding: 10px;
+                color: #B3A89A;
+            }
+
+            a {
+                color: $primary-color;
+            }
         }
 
-        a {
-            color: $primary-color;
+        // RESPONSIVE HEADER ELEMENTS
+        .hamburger-div {
+            display: none;
         }
-    }
 
-    // RESPONSIVE HEADER ELEMENTS
-    .hamburger-div {
-        display: none;
-    }
-
-    .callnow-div {
-        display: none;
+        .callnow-div {
+            display: none;
+        }
     }
 }
 
@@ -687,51 +701,64 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
         min-height: 7rem;
         background: $background-color;
         width: 100%;
         color: $primary-color;
 
-        .logo-div {
+        .upper-header {
             display: flex;
-            flex-direction: column;
-            font-size: 18px;
+            width: 100%;
+            .callnow-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 2rem;
+                background-color: $background-color;
+                border-bottom: 1px solid white;
+
+                p {
+                    text-align: center;
+                }
+            }
         }
 
-        nav {
-            display: none;
-        }
+        .lower-header {
 
-        .hamburger-div {
-            display: flex;
+            .logo-div {
+                display: flex;
+                flex-direction: column;
+                font-size: 18px;
+            }
 
-            .fa-bars {
-                font-size: 2rem;
+            nav {
+                display: none;
+            }
 
+            .hamburger-div {
+                display: flex;
+
+                .fa-bars {
+                    font-size: 2rem;
+
+                }
             }
         }
     }
 
     body {
-        .callnow-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 2rem;
-            background-color: $background-color;
-            border-bottom: 1px solid white;
 
-            p {
+        .first-h1 {
+            h1 {
                 text-align: center;
+                font-size: 35px;
             }
         }
-
-        .first-h1{
-            h1{
-            text-align: center;
-            font-size: 35px;
+        .first-h3{
+            h3 {
+                font-size: 18px;
+                font-weight: 100;
             }
         }
     }

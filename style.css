@@ -16,6 +16,18 @@ a {
 
 header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 7rem;
+  background: transparent;
+  width: 100%;
+  color: white;
+}
+header .upper-header {
+  display: none;
+}
+header .lower-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
@@ -24,32 +36,32 @@ header {
   width: 100%;
   color: white;
 }
-header .logo-div {
+header .lower-header .logo-div {
   display: flex;
   flex-direction: column;
   font-size: 18px;
 }
-header nav {
+header .lower-header nav {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-header nav a:last-child {
+header .lower-header nav a:last-child {
   border: 1px solid white;
   padding: 10px;
 }
-header nav a:last-child:hover {
+header .lower-header nav a:last-child:hover {
   border: 1px solid #B3A89A;
   padding: 10px;
   color: #B3A89A;
 }
-header nav a {
+header .lower-header nav a {
   color: white;
 }
-header .hamburger-div {
+header .lower-header .hamburger-div {
   display: none;
 }
-header .callnow-div {
+header .lower-header .callnow-div {
   display: none;
 }
 
@@ -559,27 +571,16 @@ main .chat-parent .chat-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
     min-height: 7rem;
     background: #262626;
     width: 100%;
     color: white;
   }
-  header .logo-div {
+  header .upper-header {
     display: flex;
-    flex-direction: column;
-    font-size: 18px;
+    width: 100%;
   }
-  header nav {
-    display: none;
-  }
-  header .hamburger-div {
-    display: flex;
-  }
-  header .hamburger-div .fa-bars {
-    font-size: 2rem;
-  }
-  body .callnow-div {
+  header .upper-header .callnow-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -588,11 +589,29 @@ main .chat-parent .chat-button {
     background-color: #262626;
     border-bottom: 1px solid white;
   }
-  body .callnow-div p {
+  header .upper-header .callnow-div p {
     text-align: center;
+  }
+  header .lower-header .logo-div {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  header .lower-header nav {
+    display: none;
+  }
+  header .lower-header .hamburger-div {
+    display: flex;
+  }
+  header .lower-header .hamburger-div .fa-bars {
+    font-size: 2rem;
   }
   body .first-h1 h1 {
     text-align: center;
     font-size: 35px;
+  }
+  body .first-h3 h3 {
+    font-size: 18px;
+    font-weight: 100;
   }
 }/*# sourceMappingURL=style.css.map */
