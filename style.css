@@ -405,6 +405,9 @@ main .fifth-section {
   overflow-x: clip;
   overflow-y: visible;
 }
+main .fifth-section .copyright-mobile {
+  display: none;
+}
 main .fifth-section .contact-text {
   display: flex;
   flex-direction: column;
@@ -616,6 +619,34 @@ main .chat-parent .chat-button {
     font-size: 18px;
     font-weight: 100;
   }
+  main .socials-parent {
+    display: none;
+  }
+  main .chat-parent {
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    z-index: 10;
+  }
+  main .chat-parent .chat-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: 6rem;
+    background-color: #9a8a78;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #262626;
+  }
+  main .chat-parent p {
+    display: none;
+  }
   main .second-section {
     background-color: #262626;
     height: auto;
@@ -724,13 +755,22 @@ main .chat-parent .chat-button {
     max-height: 287px;
     overflow: hidden;
     gap: 1rem;
+    text-align: center;
+    box-shadow: none;
+    border-bottom: 1px solid #9a8a78;
+  }
+  main .second-section .item3 p,
+  main .second-section .item4 p,
+  main .second-section .item5 p,
+  main .second-section .item6 p {
+    padding: 0 2rem;
   }
   main .second-section .item3 svg,
   main .second-section .item4 svg,
   main .second-section .item5 svg,
   main .second-section .item6 svg {
-    width: 4rem !important;
-    height: 4rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
   }
   main .second-section .item7 {
     grid-column: 1/span 2;
@@ -740,19 +780,21 @@ main .chat-parent .chat-button {
     align-items: center;
     justify-content: center;
     text-align: left;
-    gap: 2rem;
-    padding: 0 5rem;
+    gap: 1rem;
+    padding: 0 1rem;
   }
   main .second-section .item7 h2 {
     letter-spacing: 5px;
     font-size: 35px;
+    font-size: 2rem;
   }
   main .second-section .item7 h3 {
-    font-size: 25px;
+    font-size: 1.3rem;
     color: #9a8a78;
   }
   main .second-section .item7 p {
     line-height: 1.8;
+    font-size: 0.9rem;
   }
   main .second-section .item7 h2,
   main .second-section .item7 h3,
@@ -760,25 +802,288 @@ main .chat-parent .chat-button {
     width: 100%;
   }
   main .second-section .item8 {
-    grid-column: 3/span 2;
+    grid-column: 1/span 2;
     grid-row: 6;
     overflow: hidden;
     position: relative;
+    height: auto;
+    width: 100%;
   }
   main .second-section .item8 img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: auto;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   main .second-section .item7,
   main .second-section .item8 {
     display: flex;
-    height: 651px;
+    height: auto;
+    min-height: 20rem;
+  }
+  main .third-section {
+    height: auto;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #262626;
+    position: relative;
+    z-index: 1;
+  }
+  main .third-section .recent-projects-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  main .third-section .recent-projects-text h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+  }
+  main .third-section .img-gallery-div {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    min-height: 20rem;
+  }
+  main .third-section .img-gallery-div img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+    border: 1px solid #9a8a78;
+  }
+  main .third-section .img-gallery-div .project-imgs {
+    position: relative;
+    height: auto;
+  }
+  main .third-section .img-gallery-div .project-imgs .overlay {
+    display: none;
+  }
+  main .third-section .img-gallery-div .project-imgs .overlay p {
+    display: none;
+  }
+  main .third-section .img-gallery-div #img1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  main .third-section .img-gallery-div #img2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .third-section .img-gallery-div #img3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  main .third-section .img-gallery-div #img4 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  main .third-section .img-gallery-div #img5 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  main .third-section .img-gallery-div .view-all-div {
+    display: flex;
+    grid-column: 1;
+    grid-row: 6;
+    z-index: 1;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main .third-section .img-gallery-div .view-all-div .view-all-btn {
+    width: 16rem;
+    height: 4rem;
+    background-color: #9a8a78;
+    border: none;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 100%;
+    height: 2rem;
+  }
+  main .third-section .img-gallery-div .view-all-div .view-all-btn:hover {
+    background-color: rgba(154, 138, 120, 0.8078431373);
+  }
+  main .fourth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #262626;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  main .fourth-section .testimonials-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: auto;
+    width: auto;
+  }
+  main .fourth-section .testimonials-parent .main-h1 {
+    background-color: #9a8a78;
+    height: 10rem;
+  }
+  main .fourth-section .testimonials-parent .names {
+    height: 16rem;
+  }
+  main .fourth-section .testimonials-parent .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid #9a8a78;
+    width: 100%;
+    padding: 0 4rem 0 1rem;
+    text-align: left;
+    gap: 1rem;
+    overflow: hidden;
+    text-align: left;
+  }
+  main .fourth-section .testimonials-parent .testimonials h3 {
+    font-size: 25px;
+    color: #9a8a78;
+    font-weight: 200;
+    text-align: left;
+  }
+  main .fourth-section .testimonials-parent .testimonials h1 {
+    font-size: 32px;
+    font-weight: 100;
+    text-align: left;
+  }
+  main .fourth-section .testimonials-parent .testimonials p {
+    line-height: 25px;
+    text-align: left;
+  }
+  main .fifth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    background-color: #262626;
+    padding: 1rem;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  main .fifth-section .contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+  }
+  main .fifth-section .contact-text h3 {
+    font-size: 25px;
+    color: #9a8a78;
+    letter-spacing: 0.2rem;
+    font-size: 35px;
+    margin-bottom: 1rem;
+  }
+  main .fifth-section .contact-text p {
+    font-size: 25px;
+    color: #9a8a78;
+    font-size: 16px;
+    line-break: auto;
+  }
+  main .fifth-section .contact-text svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  main .fifth-section .contact-text .address-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  main .fifth-section .contact-text .copyright {
+    display: none;
+  }
+  main .fifth-section form {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  main .fifth-section form div {
+    padding: 2rem;
+  }
+  main .fifth-section form .text-input {
+    display: flex;
+    flex-direction: column;
+    color: #9a8a78;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  main .fifth-section form input[type=text],
+  main .fifth-section form [type=email],
+  main .fifth-section form [type=number] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9a8a78;
+  }
+  main .fifth-section form .name-input {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  main .fifth-section form .email-input {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  main .fifth-section form .submit-input {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  main .fifth-section form .submit-input #submit {
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+    color: #9a8a78;
+    border: 1px solid #9a8a78;
+  }
+  main .fifth-section .contact-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    height: auto;
+    width: 15rem;
+    color: #9a8a78;
+  }
+  main .fifth-section .contact-menu #callnow {
+    width: 50%;
+    margin-top: 2rem;
+    height: 2.5rem;
+    background-color: #9a8a78;
+    border: 1px solid #9a8a78;
+    color: #262626;
+  }
+  main .fifth-section .copyright-mobile {
+    display: flex;
+    color: #9a8a78;
+    margin-top: 4rem;
+    height: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
