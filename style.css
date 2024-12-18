@@ -1086,4 +1086,34 @@ main .chat-parent .chat-button {
     margin-top: 4rem;
     height: 10rem;
   }
+}
+body {
+  background-color: #262626;
+}
+
+.services-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 5rem;
+}
+.services-parent .services {
+  box-shadow: 0 0 0 1px #9a8a78;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services-parent .services .services-inner-div {
+  padding: 0 5rem;
+}
+.services-parent .div1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9a8a78;
+}
+.services-parent .div4 img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
