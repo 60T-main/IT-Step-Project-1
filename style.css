@@ -68,7 +68,7 @@ header .lower-header .callnow-div {
   display: none;
 }
 
-main::before {
+.home-main::before {
   content: "";
   position: fixed;
   top: 0;
@@ -84,14 +84,15 @@ main::before {
   pointer-events: none;
 }
 
-main {
+.home-main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: auto;
 }
-main .first-section {
+
+.first-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,14 +100,15 @@ main .first-section {
   top: 20rem;
   gap: 1rem;
 }
-main .first-section h1 {
+.first-section h1 {
   font-size: 50px;
 }
-main .first-section h3 {
+.first-section h3 {
   font-size: 25px;
   text-align: center;
 }
-main .second-section {
+
+.second-section {
   background-color: #262626;
   height: auto;
   width: 100%;
@@ -115,34 +117,30 @@ main .second-section {
   overflow-x: clip;
   overflow-y: visible;
 }
-main .second-section .grid-container-inner {
+.second-section .grid-container-inner {
   display: grid;
   grid-gap: 1px;
   grid-template-columns: repeat(4, 1fr);
   padding-top: 4rem;
 }
-main .second-section .grid-item {
+.second-section .grid-item {
   box-shadow: 0 0 0 1px #9a8a78;
   min-height: 10rem;
 }
-main .second-section .item1 {
+.second-section .item1 {
   grid-column: 1/span 2;
   grid-row: 1;
   overflow: hidden;
   position: relative;
 }
-main .second-section .item1 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.second-section .item1 img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .second-section .item2 {
+.second-section .item2 {
   display: flex;
   flex-direction: column;
   grid-column: 3/span 2;
@@ -153,18 +151,18 @@ main .second-section .item2 {
   margin-left: -6rem;
   gap: 1.5rem;
 }
-main .second-section .item2 h2 {
+.second-section .item2 h2 {
   letter-spacing: 5px;
   font-size: 35px;
 }
-main .second-section .item2 ul {
+.second-section .item2 ul {
   margin-left: -2rem;
 }
-main .second-section .item2 ul li {
+.second-section .item2 ul li {
   list-style-type: disc;
   padding-bottom: 10px;
 }
-main .second-section .item2 button {
+.second-section .item2 button {
   width: 16rem;
   height: 4rem;
   background-color: #9a8a78;
@@ -175,17 +173,17 @@ main .second-section .item2 button {
   cursor: pointer;
   transition: 0.4s;
 }
-main .second-section .item2 button:hover {
+.second-section .item2 button:hover {
   background-color: rgba(154, 138, 120, 0.8078431373);
 }
-main .second-section .item1,
-main .second-section .item2 {
+.second-section .item1,
+.second-section .item2 {
   height: 700px;
 }
-main .second-section .item3,
-main .second-section .item4,
-main .second-section .item5,
-main .second-section .item6 {
+.second-section .item3,
+.second-section .item4,
+.second-section .item5,
+.second-section .item6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,14 +191,14 @@ main .second-section .item6 {
   height: 287px;
   gap: 1rem;
 }
-main .second-section .item3 svg,
-main .second-section .item4 svg,
-main .second-section .item5 svg,
-main .second-section .item6 svg {
+.second-section .item3 svg,
+.second-section .item4 svg,
+.second-section .item5 svg,
+.second-section .item6 svg {
   width: 4rem !important;
   height: 4rem !important;
 }
-main .second-section .item7 {
+.second-section .item7 {
   grid-column: 1/span 2;
   grid-row: 3;
   display: flex;
@@ -211,45 +209,43 @@ main .second-section .item7 {
   gap: 2rem;
   padding: 0 5rem;
 }
-main .second-section .item7 h2 {
+.second-section .item7 h2 {
   letter-spacing: 5px;
   font-size: 35px;
 }
-main .second-section .item7 h3 {
+.second-section .item7 h3 {
   font-size: 25px;
   color: #9a8a78;
 }
-main .second-section .item7 p {
+.second-section .item7 p {
   line-height: 1.8;
+  font-size: 0.9rem;
 }
-main .second-section .item7 h2,
-main .second-section .item7 h3,
-main .second-section .item7 p {
+.second-section .item7 h2,
+.second-section .item7 h3,
+.second-section .item7 p {
   width: 100%;
 }
-main .second-section .item8 {
+.second-section .item8 {
   grid-column: 3/span 2;
   grid-row: 3;
   overflow: hidden;
   position: relative;
 }
-main .second-section .item8 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.second-section .item8 img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .second-section .item7,
-main .second-section .item8 {
+.second-section .item7,
+.second-section .item8 {
   display: flex;
   height: 651px;
 }
-main .third-section {
+
+.third-section {
   height: auto;
   width: 100%;
   padding: 0 5rem;
@@ -257,18 +253,18 @@ main .third-section {
   position: relative;
   z-index: 1;
 }
-main .third-section .recent-projects-text {
+.third-section .recent-projects-text {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
 }
-main .third-section .recent-projects-text h2 {
+.third-section .recent-projects-text h2 {
   letter-spacing: 5px;
   font-size: 35px;
   font-size: 40px;
 }
-main .third-section .img-gallery-div {
+.third-section .img-gallery-div {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(18, 1fr);
@@ -278,7 +274,7 @@ main .third-section .img-gallery-div {
   height: 100%;
   min-height: 20rem;
 }
-main .third-section .img-gallery-div img {
+.third-section .img-gallery-div img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -287,10 +283,10 @@ main .third-section .img-gallery-div img {
      object-position: 50% 50%;
   border: 1px solid #9a8a78;
 }
-main .third-section .img-gallery-div .project-imgs {
+.third-section .img-gallery-div .project-imgs {
   position: relative;
 }
-main .third-section .img-gallery-div .project-imgs .overlay {
+.third-section .img-gallery-div .project-imgs .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,42 +299,42 @@ main .third-section .img-gallery-div .project-imgs .overlay {
   opacity: 0;
   cursor: pointer;
 }
-main .third-section .img-gallery-div .project-imgs .overlay p {
+.third-section .img-gallery-div .project-imgs .overlay p {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 22px;
   text-align: center;
 }
-main .third-section .img-gallery-div .project-imgs .overlay:hover {
+.third-section .img-gallery-div .project-imgs .overlay:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.555);
 }
-main .third-section .img-gallery-div #img1 {
+.third-section .img-gallery-div #img1 {
   grid-column: span 4;
   grid-row: span 8;
 }
-main .third-section .img-gallery-div #img2 {
+.third-section .img-gallery-div #img2 {
   grid-column: 6/span 4;
   grid-row: span 6;
 }
-main .third-section .img-gallery-div #img3 {
+.third-section .img-gallery-div #img3 {
   grid-column: 6/span 4;
   grid-row: 8/span 8;
 }
-main .third-section .img-gallery-div #img4 {
+.third-section .img-gallery-div #img4 {
   grid-column: span 4;
   grid-row: 10/span 6;
 }
-main .third-section .img-gallery-div #img5 {
+.third-section .img-gallery-div #img5 {
   grid-column: 11/span 10;
   grid-row: 1/span 15;
 }
-main .third-section .img-gallery-div .view-all-div {
+.third-section .img-gallery-div .view-all-div {
   display: flex;
   grid-column: 9/span 5;
   grid-row: 15/span 2;
   z-index: 1;
 }
-main .third-section .img-gallery-div .view-all-div .view-all-btn {
+.third-section .img-gallery-div .view-all-div .view-all-btn {
   width: 16rem;
   height: 4rem;
   background-color: #9a8a78;
@@ -349,10 +345,11 @@ main .third-section .img-gallery-div .view-all-div .view-all-btn {
   cursor: pointer;
   transition: 0.4s;
 }
-main .third-section .img-gallery-div .view-all-div .view-all-btn:hover {
+.third-section .img-gallery-div .view-all-div .view-all-btn:hover {
   background-color: rgba(154, 138, 120, 0.8078431373);
 }
-main .fourth-section {
+
+.fourth-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,13 +360,13 @@ main .fourth-section {
   overflow-x: clip;
   overflow-y: visible;
 }
-main .fourth-section .testimonials-parent {
+.fourth-section .testimonials-parent {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 25rem;
 }
-main .fourth-section .testimonials-parent .testimonials {
+.fourth-section .testimonials-parent .testimonials {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,19 +378,22 @@ main .fourth-section .testimonials-parent .testimonials {
   gap: 1rem;
   overflow: hidden;
 }
-main .fourth-section .testimonials-parent .testimonials h3 {
+.fourth-section .testimonials-parent .testimonials h3 {
   font-size: 25px;
   color: #9a8a78;
+  font-weight: 100;
   font-weight: 200;
 }
-main .fourth-section .testimonials-parent .testimonials h1 {
+.fourth-section .testimonials-parent .testimonials h1 {
   font-size: 35px;
   font-weight: 100;
 }
-main .fourth-section .testimonials-parent .testimonials p {
-  line-height: 25px;
+.fourth-section .testimonials-parent .testimonials p {
+  line-height: 1.8;
+  font-size: 0.9rem;
 }
-main .fifth-section {
+
+.fifth-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,77 +405,79 @@ main .fifth-section {
   overflow-x: clip;
   overflow-y: visible;
 }
-main .fifth-section .copyright-mobile {
+.fifth-section .copyright-mobile {
   display: none;
 }
-main .fifth-section .contact-text {
+.fifth-section .contact-text {
   display: flex;
   flex-direction: column;
   width: 20rem;
 }
-main .fifth-section .contact-text h3 {
+.fifth-section .contact-text h3 {
   font-size: 25px;
   color: #9a8a78;
+  font-weight: 100;
   letter-spacing: 0.2rem;
   font-size: 35px;
   margin-bottom: 3rem;
 }
-main .fifth-section .contact-text p {
+.fifth-section .contact-text p {
   font-size: 25px;
   color: #9a8a78;
+  font-weight: 100;
   font-size: 16px;
   line-break: auto;
 }
-main .fifth-section .contact-text svg {
+.fifth-section .contact-text svg {
   width: 2rem;
   height: 2rem;
 }
-main .fifth-section .contact-text .address-div {
+.fifth-section .contact-text .address-div {
   display: flex;
   align-items: center;
   height: 4rem;
   gap: 1.5rem;
 }
-main .fifth-section form {
+.fifth-section form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-main .fifth-section form div {
+.fifth-section form div {
   padding: 2rem;
 }
-main .fifth-section form .text-input {
+.fifth-section form .text-input {
   display: flex;
   flex-direction: column;
   color: #9a8a78;
   gap: 0.8rem;
 }
-main .fifth-section form input[type=text],
-main .fifth-section form [type=email],
-main .fifth-section form [type=number] {
+.fifth-section form input[type=text],
+.fifth-section form [type=email],
+.fifth-section form [type=number] {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9a8a78;
 }
-main .fifth-section form .name-input {
+.fifth-section form .name-input {
   grid-column: 1;
   grid-row: 1;
 }
-main .fifth-section form .email-input {
+.fifth-section form .email-input {
   grid-column: 1/span 2;
   grid-row: 2;
 }
-main .fifth-section form .submit-input {
+.fifth-section form .submit-input {
   grid-column: 1/span 2;
   grid-row: 4;
 }
-main .fifth-section form .submit-input #submit {
+.fifth-section form .submit-input #submit {
   width: 100%;
   height: 3rem;
   background-color: transparent;
   color: #9a8a78;
   border: 1px solid #9a8a78;
 }
-main .fifth-section .contact-menu {
+.fifth-section .contact-menu {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -484,7 +486,7 @@ main .fifth-section .contact-menu {
   width: 15rem;
   color: #9a8a78;
 }
-main .fifth-section .contact-menu #callnow {
+.fifth-section .contact-menu #callnow {
   width: 50%;
   margin-top: 2rem;
   height: 2.5rem;
@@ -492,7 +494,8 @@ main .fifth-section .contact-menu #callnow {
   border: 1px solid #9a8a78;
   color: #262626;
 }
-main .socials-parent {
+
+.socials-parent {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -500,25 +503,26 @@ main .socials-parent {
   bottom: 4rem;
   z-index: 10;
 }
-main .socials-parent .socials {
+.socials-parent .socials {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main .socials-parent .socials .fb-div,
-main .socials-parent .socials .insta-div,
-main .socials-parent .socials .yelp-div {
+.socials-parent .socials .fb-div,
+.socials-parent .socials .insta-div,
+.socials-parent .socials .yelp-div {
   font-size: 24px;
   color: white;
   cursor: pointer;
 }
-main .chat-parent {
+
+.chat-parent {
   position: fixed;
   right: 2rem;
   bottom: 4rem;
   z-index: 10;
 }
-main .chat-parent .chat-button {
+.chat-parent .chat-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -536,33 +540,33 @@ main .chat-parent .chat-button {
 }
 
 @media (max-width: 1120px) {
-  main .third-section {
+  .third-section {
     height: 100rem;
   }
-  main .third-section .img-gallery-div {
+  .third-section .img-gallery-div {
     grid-template-rows: repeat(18, 1fr);
   }
-  main .third-section .img-gallery-div #img1 {
+  .third-section .img-gallery-div #img1 {
     grid-column: 1/span 9;
     grid-row: 1/span 5;
   }
-  main .third-section .img-gallery-div #img2 {
+  .third-section .img-gallery-div #img2 {
     grid-column: 11/span 10;
     grid-row: span 4;
   }
-  main .third-section .img-gallery-div #img3 {
+  .third-section .img-gallery-div #img3 {
     grid-column: 11/span 10;
     grid-row: 6/span 4;
   }
-  main .third-section .img-gallery-div #img4 {
+  .third-section .img-gallery-div #img4 {
     grid-column: 1/span 9;
     grid-row: 7/span 3;
   }
-  main .third-section .img-gallery-div #img5 {
+  .third-section .img-gallery-div #img5 {
     grid-column: 1/span 20;
     grid-row: 11/span 6;
   }
-  main .third-section .img-gallery-div .view-all-div {
+  .third-section .img-gallery-div .view-all-div {
     display: flex;
     grid-column: 9/span 5;
     grid-row: 16/span 2;
@@ -619,16 +623,16 @@ main .chat-parent .chat-button {
     font-size: 18px;
     font-weight: 100;
   }
-  main .socials-parent {
+  .socials-parent {
     display: none;
   }
-  main .chat-parent {
+  .chat-parent {
     position: fixed;
     right: 2rem;
     bottom: 4rem;
     z-index: 10;
   }
-  main .chat-parent .chat-button {
+  .chat-parent .chat-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -644,27 +648,27 @@ main .chat-parent .chat-button {
     font-weight: bold;
     color: #262626;
   }
-  main .chat-parent p {
+  .chat-parent p {
     display: none;
   }
-  main .second-section {
+  .second-section {
     background-color: #262626;
     height: auto;
     width: 100%;
     margin-top: 45rem;
     padding: 0;
   }
-  main .second-section .grid-container-inner {
+  .second-section .grid-container-inner {
     display: grid;
     grid-gap: 1px;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 0;
   }
-  main .second-section .grid-item {
+  .second-section .grid-item {
     box-shadow: 0 0 0 1px #9a8a78;
     min-height: 0;
   }
-  main .second-section .item1 {
+  .second-section .item1 {
     grid-column: 1/span 2;
     grid-row: 2;
     overflow: hidden;
@@ -674,13 +678,13 @@ main .chat-parent .chat-button {
     width: 100%;
     height: auto;
   }
-  main .second-section .item1 img {
+  .second-section .item1 img {
     width: 100%;
     height: auto;
     min-width: 20rem;
     min-height: 15rem;
   }
-  main .second-section .item2 {
+  .second-section .item2 {
     display: flex;
     flex-direction: column;
     grid-column: 1/span 2;
@@ -693,21 +697,21 @@ main .chat-parent .chat-button {
     gap: 1.5rem;
     min-height: 25rem;
   }
-  main .second-section .item2 h2 {
+  .second-section .item2 h2 {
     letter-spacing: 5px;
     font-size: 35px;
     font-size: 1.8rem;
     margin-left: 2rem;
   }
-  main .second-section .item2 ul {
+  .second-section .item2 ul {
     margin-left: 1rem;
     font-size: 1rem;
   }
-  main .second-section .item2 ul li {
+  .second-section .item2 ul li {
     list-style-type: disc;
     padding-bottom: 10px;
   }
-  main .second-section .item2 button {
+  .second-section .item2 button {
     width: 16rem;
     height: 4rem;
     background-color: #9a8a78;
@@ -720,33 +724,33 @@ main .chat-parent .chat-button {
     width: 10rem;
     height: 3rem;
   }
-  main .second-section .item2 button:hover {
+  .second-section .item2 button:hover {
     background-color: rgba(154, 138, 120, 0.8078431373);
   }
-  main .second-section .item1,
-  main .second-section .item2 {
+  .second-section .item1,
+  .second-section .item2 {
     height: auto;
   }
-  main .second-section .item3 {
+  .second-section .item3 {
     grid-column: 1/span 1;
     grid-row: 3;
   }
-  main .second-section .item4 {
+  .second-section .item4 {
     grid-column: 2;
     grid-row: 3;
   }
-  main .second-section .item5 {
+  .second-section .item5 {
     grid-column: 1;
     grid-row: 4;
   }
-  main .second-section .item6 {
+  .second-section .item6 {
     grid-column: 2;
     grid-row: 4;
   }
-  main .second-section .item3,
-  main .second-section .item4,
-  main .second-section .item5,
-  main .second-section .item6 {
+  .second-section .item3,
+  .second-section .item4,
+  .second-section .item5,
+  .second-section .item6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -759,20 +763,20 @@ main .chat-parent .chat-button {
     box-shadow: none;
     border-bottom: 1px solid #9a8a78;
   }
-  main .second-section .item3 p,
-  main .second-section .item4 p,
-  main .second-section .item5 p,
-  main .second-section .item6 p {
+  .second-section .item3 p,
+  .second-section .item4 p,
+  .second-section .item5 p,
+  .second-section .item6 p {
     padding: 0 2rem;
   }
-  main .second-section .item3 svg,
-  main .second-section .item4 svg,
-  main .second-section .item5 svg,
-  main .second-section .item6 svg {
+  .second-section .item3 svg,
+  .second-section .item4 svg,
+  .second-section .item5 svg,
+  .second-section .item6 svg {
     width: 3rem !important;
     height: 3rem !important;
   }
-  main .second-section .item7 {
+  .second-section .item7 {
     grid-column: 1/span 2;
     grid-row: 5;
     display: flex;
@@ -783,25 +787,25 @@ main .chat-parent .chat-button {
     gap: 1rem;
     padding: 0 1rem;
   }
-  main .second-section .item7 h2 {
+  .second-section .item7 h2 {
     letter-spacing: 5px;
     font-size: 35px;
     font-size: 2rem;
   }
-  main .second-section .item7 h3 {
+  .second-section .item7 h3 {
     font-size: 1.3rem;
     color: #9a8a78;
   }
-  main .second-section .item7 p {
+  .second-section .item7 p {
     line-height: 1.8;
     font-size: 0.9rem;
   }
-  main .second-section .item7 h2,
-  main .second-section .item7 h3,
-  main .second-section .item7 p {
+  .second-section .item7 h2,
+  .second-section .item7 h3,
+  .second-section .item7 p {
     width: 100%;
   }
-  main .second-section .item8 {
+  .second-section .item8 {
     grid-column: 1/span 2;
     grid-row: 6;
     overflow: hidden;
@@ -809,17 +813,17 @@ main .chat-parent .chat-button {
     height: auto;
     width: 100%;
   }
-  main .second-section .item8 img {
+  .second-section .item8 img {
     height: auto;
     width: 100%;
   }
-  main .second-section .item7,
-  main .second-section .item8 {
+  .second-section .item7,
+  .second-section .item8 {
     display: flex;
     height: auto;
     min-height: 20rem;
   }
-  main .third-section {
+  .third-section {
     height: auto;
     width: 100%;
     padding: 0 1rem;
@@ -827,19 +831,19 @@ main .chat-parent .chat-button {
     position: relative;
     z-index: 1;
   }
-  main .third-section .recent-projects-text {
+  .third-section .recent-projects-text {
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 1rem 0;
     width: 100%;
   }
-  main .third-section .recent-projects-text h2 {
+  .third-section .recent-projects-text h2 {
     font-size: 1.5rem;
     letter-spacing: 1px;
     text-wrap: nowrap;
   }
-  main .third-section .img-gallery-div {
+  .third-section .img-gallery-div {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
@@ -849,7 +853,7 @@ main .chat-parent .chat-button {
     height: auto;
     min-height: 20rem;
   }
-  main .third-section .img-gallery-div img {
+  .third-section .img-gallery-div img {
     width: 100%;
     height: auto;
     -o-object-fit: cover;
@@ -858,37 +862,37 @@ main .chat-parent .chat-button {
        object-position: 50% 50%;
     border: 1px solid #9a8a78;
   }
-  main .third-section .img-gallery-div .project-imgs {
+  .third-section .img-gallery-div .project-imgs {
     position: relative;
     height: auto;
   }
-  main .third-section .img-gallery-div .project-imgs .overlay {
+  .third-section .img-gallery-div .project-imgs .overlay {
     display: none;
   }
-  main .third-section .img-gallery-div .project-imgs .overlay p {
+  .third-section .img-gallery-div .project-imgs .overlay p {
     display: none;
   }
-  main .third-section .img-gallery-div #img1 {
+  .third-section .img-gallery-div #img1 {
     grid-column: 1;
     grid-row: 1;
   }
-  main .third-section .img-gallery-div #img2 {
+  .third-section .img-gallery-div #img2 {
     grid-column: 1;
     grid-row: 2;
   }
-  main .third-section .img-gallery-div #img3 {
+  .third-section .img-gallery-div #img3 {
     grid-column: 1;
     grid-row: 3;
   }
-  main .third-section .img-gallery-div #img4 {
+  .third-section .img-gallery-div #img4 {
     grid-column: 1;
     grid-row: 4;
   }
-  main .third-section .img-gallery-div #img5 {
+  .third-section .img-gallery-div #img5 {
     grid-column: 1;
     grid-row: 5;
   }
-  main .third-section .img-gallery-div .view-all-div {
+  .third-section .img-gallery-div .view-all-div {
     display: flex;
     grid-column: 1;
     grid-row: 6;
@@ -898,7 +902,7 @@ main .chat-parent .chat-button {
     align-items: center;
     width: 100%;
   }
-  main .third-section .img-gallery-div .view-all-div .view-all-btn {
+  .third-section .img-gallery-div .view-all-div .view-all-btn {
     width: 16rem;
     height: 4rem;
     background-color: #9a8a78;
@@ -911,10 +915,10 @@ main .chat-parent .chat-button {
     width: 100%;
     height: 2rem;
   }
-  main .third-section .img-gallery-div .view-all-div .view-all-btn:hover {
+  .third-section .img-gallery-div .view-all-div .view-all-btn:hover {
     background-color: rgba(154, 138, 120, 0.8078431373);
   }
-  main .fourth-section {
+  .fourth-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -926,7 +930,7 @@ main .chat-parent .chat-button {
     overflow-x: clip;
     overflow-y: visible;
   }
-  main .fourth-section .testimonials-parent {
+  .fourth-section .testimonials-parent {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -934,14 +938,14 @@ main .chat-parent .chat-button {
     height: auto;
     width: auto;
   }
-  main .fourth-section .testimonials-parent .main-h1 {
+  .fourth-section .testimonials-parent .main-h1 {
     background-color: #9a8a78;
     height: 10rem;
   }
-  main .fourth-section .testimonials-parent .names {
+  .fourth-section .testimonials-parent .names {
     height: 16rem;
   }
-  main .fourth-section .testimonials-parent .testimonials {
+  .fourth-section .testimonials-parent .testimonials {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -955,22 +959,23 @@ main .chat-parent .chat-button {
     overflow: hidden;
     text-align: left;
   }
-  main .fourth-section .testimonials-parent .testimonials h3 {
+  .fourth-section .testimonials-parent .testimonials h3 {
     font-size: 25px;
     color: #9a8a78;
+    font-weight: 100;
     font-weight: 200;
     text-align: left;
   }
-  main .fourth-section .testimonials-parent .testimonials h1 {
+  .fourth-section .testimonials-parent .testimonials h1 {
     font-size: 32px;
     font-weight: 100;
     text-align: left;
   }
-  main .fourth-section .testimonials-parent .testimonials p {
+  .fourth-section .testimonials-parent .testimonials p {
     line-height: 25px;
     text-align: left;
   }
-  main .fifth-section {
+  .fifth-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -983,31 +988,33 @@ main .chat-parent .chat-button {
     overflow-x: clip;
     overflow-y: visible;
   }
-  main .fifth-section .contact-text {
+  .fifth-section .contact-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20rem;
   }
-  main .fifth-section .contact-text h3 {
+  .fifth-section .contact-text h3 {
     font-size: 25px;
     color: #9a8a78;
+    font-weight: 100;
     letter-spacing: 0.2rem;
     font-size: 35px;
     margin-bottom: 1rem;
   }
-  main .fifth-section .contact-text p {
+  .fifth-section .contact-text p {
     font-size: 25px;
     color: #9a8a78;
+    font-weight: 100;
     font-size: 16px;
     line-break: auto;
   }
-  main .fifth-section .contact-text svg {
+  .fifth-section .contact-text svg {
     width: 2rem;
     height: 2rem;
   }
-  main .fifth-section .contact-text .address-div {
+  .fifth-section .contact-text .address-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1016,52 +1023,52 @@ main .chat-parent .chat-button {
     margin-top: 1rem;
     text-align: center;
   }
-  main .fifth-section .contact-text .copyright {
+  .fifth-section .contact-text .copyright {
     display: none;
   }
-  main .fifth-section form {
+  .fifth-section form {
     padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
   }
-  main .fifth-section form div {
+  .fifth-section form div {
     padding: 2rem;
   }
-  main .fifth-section form .text-input {
+  .fifth-section form .text-input {
     display: flex;
     flex-direction: column;
     color: #9a8a78;
     gap: 0.8rem;
     width: 100%;
   }
-  main .fifth-section form input[type=text],
-  main .fifth-section form [type=email],
-  main .fifth-section form [type=number] {
+  .fifth-section form input[type=text],
+  .fifth-section form [type=email],
+  .fifth-section form [type=number] {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #9a8a78;
   }
-  main .fifth-section form .name-input {
+  .fifth-section form .name-input {
     grid-column: 1;
     grid-row: 1;
   }
-  main .fifth-section form .email-input {
+  .fifth-section form .email-input {
     grid-column: 1;
     grid-row: 2;
   }
-  main .fifth-section form .submit-input {
+  .fifth-section form .submit-input {
     grid-column: 1;
     grid-row: 6;
   }
-  main .fifth-section form .submit-input #submit {
+  .fifth-section form .submit-input #submit {
     width: 100%;
     height: 3rem;
     background-color: transparent;
     color: #9a8a78;
     border: 1px solid #9a8a78;
   }
-  main .fifth-section .contact-menu {
+  .fifth-section .contact-menu {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -1072,7 +1079,7 @@ main .chat-parent .chat-button {
     width: 15rem;
     color: #9a8a78;
   }
-  main .fifth-section .contact-menu #callnow {
+  .fifth-section .contact-menu #callnow {
     width: 50%;
     margin-top: 2rem;
     height: 2.5rem;
@@ -1080,7 +1087,7 @@ main .chat-parent .chat-button {
     border: 1px solid #9a8a78;
     color: #262626;
   }
-  main .fifth-section .copyright-mobile {
+  .fifth-section .copyright-mobile {
     display: flex;
     color: #9a8a78;
     margin-top: 4rem;
@@ -1092,20 +1099,47 @@ body {
 }
 
 .services-parent {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
+  display: grid;
   padding: 0 5rem;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 .services-parent .services {
   box-shadow: 0 0 0 1px #9a8a78;
-  min-height: 10rem;
+  min-height: 26.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .services-parent .services .services-inner-div {
-  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+  width: 14rem;
+}
+.services-parent .services h2 {
+  letter-spacing: 5px;
+  font-size: 35px;
+}
+.services-parent .services h3 {
+  font-size: 25px;
+  color: #9a8a78;
+  font-weight: 100;
+}
+.services-parent .services p {
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+.services-parent .services img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services-parent .div1 {
   display: flex;
@@ -1113,7 +1147,223 @@ body {
   justify-content: center;
   background-color: #9a8a78;
 }
-.services-parent .div4 img {
-  width: 100%;
+.services-parent .div9 .services-inner-div h2 {
+  font-weight: 100;
+  font-size: 2rem;
+  letter-spacing: 0;
+  text-wrap: nowrap;
+}
+.services-parent .div10 p,
+.services-parent .div11 p,
+.services-parent .div12 p {
+  font-size: 1.5rem;
+  text-wrap: nowrap;
+}
+.services-parent .div10 li,
+.services-parent .div11 li,
+.services-parent .div12 li {
+  list-style: disc;
+  margin-inline-start: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .services-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .services-parent .services {
+    min-height: 0;
+  }
+  .services-parent .services .services-inner-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 20rem;
+    min-height: 14rem;
+    padding-inline-start: 2rem;
+  }
+  .services-parent .services .services-inner-div h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+  .services-parent .services .services-inner-div h3 br {
+    display: none;
+  }
+  .services-parent .services .services-inner-div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .services-parent .div1 {
+    min-height: 4rem;
+    align-items: start;
+    padding-inline-start: 2rem;
+  }
+  .services-parent .div1 h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  .services-parent .div1 h2 br {
+    display: none;
+  }
+  .services-parent .div4 {
+    grid-row: 2;
+    height: auto;
+  }
+  .services-parent .div4 img {
+    max-height: 20rem;
+  }
+  .services-parent .div9 .services-inner-div {
+    min-height: 4rem;
+  }
+  .services-parent .div9 .services-inner-div h2 {
+    font-size: 1.4rem;
+  }
+}
+.projects-parent {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  padding: 0 5rem;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+.projects-parent .projects {
+  box-shadow: 0 0 0 1px #9a8a78;
+  min-height: 26.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects-parent .projects h2 {
+  letter-spacing: 5px;
+  font-size: 35px;
+}
+.projects-parent .projects h3 {
+  font-size: 25px;
+  color: #9a8a78;
+  font-weight: 100;
+}
+.projects-parent .pr-1 {
+  background-color: #9a8a78;
+}
+
+.nelson-section .nelson-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-inline-start: 5rem;
+  min-height: 19rem;
+}
+.nelson-section .nelson-text h3 {
+  font-size: 25px;
+  color: #9a8a78;
+  font-weight: 100;
+}
+.nelson-section .nelson-text p {
+  line-height: 1.8;
+  font-size: 0.9rem;
+  font-size: 1rem;
+}
+.nelson-section .nelson-gallery-div {
+  display: grid;
+  padding: 0 5rem;
+  overflow-x: clip;
+  overflow-y: visible;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  max-height: 40rem;
   height: auto;
+}
+.nelson-section .nelson-gallery-div img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nelson-section .nelson-imgs {
+  position: relative;
+}
+.nelson-section .nelson-imgs .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: white;
+  opacity: 0;
+  cursor: pointer;
+}
+.nelson-section .nelson-imgs .overlay p {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+.nelson-section .nelson-imgs .overlay:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.555);
+}
+.nelson-section .nels-img1 {
+  grid-row: 1/span 13;
+  grid-column: 1/span 6;
+}
+.nelson-section .nels-img3 {
+  grid-row: 1/span 6;
+  grid-column: 8/span 5;
+}
+.nelson-section .nels-img4 {
+  grid-row: 8/span 6;
+  grid-column: 8/span 5;
+}
+.nelson-section .nels-img2 {
+  grid-row: 1/span 13;
+  grid-column: 14/span 6;
+}
+.nelson-section .nels-img5 {
+  grid-row: 1/span 10;
+  grid-column: 21/span 6;
+}
+
+.grove-section .grove-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-inline-start: 5rem;
+  min-height: 19rem;
+}
+.grove-section .grove-text h3 {
+  font-size: 25px;
+  color: #9a8a78;
+  font-weight: 100;
+}
+.grove-section .grove-text p {
+  line-height: 1.8;
+  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.jefferson-section .jefferson-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-inline-start: 5rem;
+  min-height: 19rem;
+}
+.jefferson-section .jefferson-text h3 {
+  font-size: 25px;
+  color: #9a8a78;
+  font-weight: 100;
+}
+.jefferson-section .jefferson-text p {
+  line-height: 1.8;
+  font-size: 0.9rem;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
