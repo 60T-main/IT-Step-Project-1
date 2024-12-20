@@ -138,6 +138,10 @@ header {
             display: flex;
             gap: 15px;
             align-items: center;
+            
+            a:hover{
+                color: $secondary-color;
+            }
 
             a:last-child {
                 border: 1px solid white;
@@ -152,6 +156,7 @@ header {
 
             a {
                 color: $primary-color;
+                transition: 0.3s;
             }
         }
 
@@ -582,6 +587,12 @@ header {
             background-color: transparent;
             border: none;
             border-bottom: 1px solid $secondary-color;
+            &:focus {
+                outline: none; 
+                background-color: transparent; 
+                box-shadow: none; 
+                color: $secondary-color;
+              }
         }
 
         .name-input {
@@ -1599,7 +1610,6 @@ body {
 }
 
 .grove-section {
-    display:grid;
     .grove-text {
         @include project-text-default();
 
@@ -1702,3 +1712,162 @@ body {
 
         }
     }
+
+    // PROJECTS PAGE MOBILE
+
+    @media (max-width: 700px) {
+        .projects-parent {
+            grid-template-columns: 1fr;
+            @include grid-layouts();
+        
+            .projects {
+                box-shadow: none;
+                min-height: 5rem;
+                h2 {
+                    @include h2;
+                }
+        
+                h3 {
+                    @include h3;
+                }
+            }
+        
+            .pr-1 {
+                background-color: $secondary-color;
+                height: 5rem;
+                min-height: 0;
+                h2{
+                    font-size: 1.5rem;
+                    br{display: none;}
+                    align-items: left;
+                }
+            }
+            .pr-4{
+                border-bottom: 1px solid $secondary-color;
+            }
+            
+            
+        }
+        .nelson-section{
+        .nelson-gallery-div{
+            @include grid-layouts();
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            max-height:fit-content;
+            height: auto;
+            row-gap: 1rem;
+            .nels-img1 {
+                grid-row: 1;
+                grid-column: 1;
+            }
+        
+            .nels-img3 {
+                grid-row: 2;
+                grid-column: 1;
+            }
+        
+            .nels-img4 {
+                grid-row: 3;
+                grid-column: 1;
+            }
+        
+            .nels-img2 {
+                grid-row: 4;
+                grid-column: 1;
+            }
+        
+            .nels-img5 {
+                grid-row: 5;
+                grid-column: 1;
+            }
+        }
+    }
+    .grove-section {
+        height: 100%;
+        .grove-text {
+            @include project-text-default();
+    
+            h3 {
+                @include h3;
+            }
+    
+            p {
+                @include p;
+                font-size: 1rem;
+            }
+        }
+    
+            .grove-gallery-div{
+            @include grid-layouts();
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            max-height: fit-content;
+            height: auto;
+            row-gap: 1rem;
+    
+            img {
+                @include responsive-img();
+            }
+        }
+    
+        .grove-imgs {
+            position: relative;
+    
+            .overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                color: black;
+                background-color: white;
+                opacity: 0;
+    
+                p {
+                    font-family: $primary-font;
+                    font-size: 22px;
+                    text-align: center;
+                }
+    
+                cursor: pointer;
+    
+                &:hover {
+                    opacity: 1;
+                    background-color: rgba(255, 255, 255, 0.555);
+                }
+            }
+        }
+    
+    
+        .grove-img1 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+    
+        .grove-img3 {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    
+        .grove-img4 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+    
+        .grove-img2 {
+            grid-row: 4;
+            grid-column: 1;
+        }
+    
+        .grove-img5 {
+            grid-row: 5;
+            grid-column: 1;
+        }
+        .grove-img6 {
+            grid-row: 6;
+            grid-column: 1;
+        }
+            }
+}

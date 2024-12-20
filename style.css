@@ -49,6 +49,9 @@ header .lower-header nav {
   gap: 15px;
   align-items: center;
 }
+header .lower-header nav a:hover {
+  color: #9a8a78;
+}
 header .lower-header nav a:last-child {
   border: 1px solid white;
   padding: 10px;
@@ -60,6 +63,7 @@ header .lower-header nav a:last-child:hover {
 }
 header .lower-header nav a {
   color: white;
+  transition: 0.3s;
 }
 header .lower-header .hamburger-div {
   display: none;
@@ -457,6 +461,14 @@ header .lower-header .callnow-div {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9a8a78;
+}
+.fifth-section form input[type=text]:focus,
+.fifth-section form [type=email]:focus,
+.fifth-section form [type=number]:focus {
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: #9a8a78;
 }
 .fifth-section form .name-input {
   grid-column: 1;
@@ -1338,9 +1350,6 @@ body {
   margin: 4rem 5rem -3rem 5rem;
 }
 
-.grove-section {
-  display: grid;
-}
 .grove-section .grove-text {
   display: flex;
   flex-direction: column;
@@ -1443,4 +1452,163 @@ body {
   line-height: 1.8;
   font-size: 0.9rem;
   font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .projects-parent {
+    grid-template-columns: 1fr;
+    display: grid;
+    padding: 0 5rem;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  .projects-parent .projects {
+    box-shadow: none;
+    min-height: 5rem;
+  }
+  .projects-parent .projects h2 {
+    letter-spacing: 5px;
+    font-size: 35px;
+  }
+  .projects-parent .projects h3 {
+    font-size: 25px;
+    color: #9a8a78;
+    font-weight: 100;
+  }
+  .projects-parent .pr-1 {
+    background-color: #9a8a78;
+    height: 5rem;
+    min-height: 0;
+  }
+  .projects-parent .pr-1 h2 {
+    font-size: 1.5rem;
+    align-items: left;
+  }
+  .projects-parent .pr-1 h2 br {
+    display: none;
+  }
+  .projects-parent .pr-4 {
+    border-bottom: 1px solid #9a8a78;
+  }
+  .nelson-section .nelson-gallery-div {
+    display: grid;
+    padding: 0 5rem;
+    overflow-x: clip;
+    overflow-y: visible;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    height: auto;
+    row-gap: 1rem;
+  }
+  .nelson-section .nelson-gallery-div .nels-img1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .nelson-section .nelson-gallery-div .nels-img3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .nelson-section .nelson-gallery-div .nels-img4 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .nelson-section .nelson-gallery-div .nels-img2 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .nelson-section .nelson-gallery-div .nels-img5 {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  .grove-section {
+    height: 100%;
+  }
+  .grove-section .grove-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-inline-start: 5rem;
+    min-height: 19rem;
+  }
+  .grove-section .grove-text h3 {
+    font-size: 25px;
+    color: #9a8a78;
+    font-weight: 100;
+  }
+  .grove-section .grove-text p {
+    line-height: 1.8;
+    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  .grove-section .grove-gallery-div {
+    display: grid;
+    padding: 0 5rem;
+    overflow-x: clip;
+    overflow-y: visible;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    height: auto;
+    row-gap: 1rem;
+  }
+  .grove-section .grove-gallery-div img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .grove-section .grove-imgs {
+    position: relative;
+  }
+  .grove-section .grove-imgs .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: white;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .grove-section .grove-imgs .overlay p {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 22px;
+    text-align: center;
+  }
+  .grove-section .grove-imgs .overlay:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.555);
+  }
+  .grove-section .grove-img1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .grove-section .grove-img3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .grove-section .grove-img4 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .grove-section .grove-img2 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .grove-section .grove-img5 {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  .grove-section .grove-img6 {
+    grid-row: 6;
+    grid-column: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
