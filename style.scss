@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 
@@ -41,13 +42,13 @@ $background-color: #262626;
     justify-content: center;
 }
 
-@mixin project-text-default{
+@mixin project-text-default {
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding-inline-start: 5rem;
-        min-height: 19rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-inline-start: 5rem;
+    min-height: 19rem;
 }
 
 @mixin responsive-img {
@@ -97,7 +98,6 @@ body {
     position: relative;
     color: $primary-color;
     font-family: $primary-font;
-    scroll-behavior: smooth;
 }
 
 a {
@@ -1485,6 +1485,7 @@ body {
 
 // PROJECTS PAGE
 
+
 .projects-parent {
     grid-template-columns: repeat(4, 1fr);
     @include grid-layouts();
@@ -1509,79 +1510,96 @@ body {
 .nelson-section {
     .nelson-text {
         @include project-text-default();
-        
+
         h3 {
             @include h3;
         }
-        
-        p{
+
+        p {
             @include p;
             font-size: 1rem;
         }
     }
-        
-        .nelson-gallery-div{
-            @include grid-layouts();
-            grid-template-columns: repeat(25, 1fr);
-            grid-template-rows: repeat(13,1fr);
-            max-height: 40rem;
-            height: auto;
-            img{
-                @include responsive-img();
+
+    .nelson-gallery-div {
+        @include grid-layouts();
+        grid-template-columns: repeat(25, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        max-height: 40rem;
+        height: auto;
+
+        img {
+            @include responsive-img();
+        }
+    }
+
+    .nelson-imgs {
+        position: relative;
+
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: black;
+            background-color: white;
+            opacity: 0;
+
+            p {
+                font-family: $primary-font;
+                font-size: 22px;
+                text-align: center;
             }
-        }   
-        .nelson-imgs{
-            position: relative;
-            .overlay {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                color: black;
-                background-color: white;
-                opacity: 0;
-                
-                p {
-                    font-family: $primary-font;
-                    font-size: 22px;
-                    text-align: center;
-                }
 
-                cursor: pointer;
+            cursor: pointer;
 
-                &:hover {
-                    opacity: 1;
-                    background-color: rgba(255, 255, 255, 0.555);
-                }
+            &:hover {
+                opacity: 1;
+                background-color: rgba(255, 255, 255, 0.555);
             }
         }
+    }
 
 
-            .nels-img1{
-                grid-row:1/ span 13;
-                grid-column: 1 / span 6;
-            }
-            .nels-img3{
-                grid-row:1 / span 6;
-                grid-column: 8 / span 5;
-            }
-            .nels-img4{
-                grid-row:8 / span 6;
-                grid-column: 8 / span 5;
-            }
-            .nels-img2{
-                grid-row:1/ span 13;
-                grid-column: 14 / span 6;
-            }
-            .nels-img5{
-                grid-row:1 / span 10;
-                grid-column: 21 / span 6;
-            }
-        }
+    .nels-img1 {
+        grid-row: 1/ span 13;
+        grid-column: 1 / span 6;
+    }
+
+    .nels-img3 {
+        grid-row: 1 / span 6;
+        grid-column: 8 / span 5;
+    }
+
+    .nels-img4 {
+        grid-row: 8 / span 6;
+        grid-column: 8 / span 5;
+    }
+
+    .nels-img2 {
+        grid-row: 1/ span 13;
+        grid-column: 14 / span 6;
+    }
+
+    .nels-img5 {
+        grid-row: 1 / span 10;
+        grid-column: 21 / span 6;
+    }
+}
+
+.line-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $secondary-color;
+    margin: 4rem 5rem -3rem 5rem;
+}
+
 .grove-section {
+    display:grid;
     .grove-text {
         @include project-text-default();
 
@@ -1589,25 +1607,98 @@ body {
             @include h3;
         }
 
-        p{
+        p {
             @include p;
             font-size: 1rem;
         }
-
     }
-}
-.jefferson-section {
-    .jefferson-text {
-        @include project-text-default();
 
-        h3 {
-            @include h3;
+        .grove-gallery-div{
+        @include grid-layouts();
+        grid-template-columns: repeat(27, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        max-height: 40rem;
+        height: auto;
+
+        img {
+            @include responsive-img();
+        }
+    }
+
+    .grove-imgs {
+        position: relative;
+
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: black;
+            background-color: white;
+            opacity: 0;
+
+            p {
+                font-family: $primary-font;
+                font-size: 22px;
+                text-align: center;
+            }
+
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+                background-color: rgba(255, 255, 255, 0.555);
+            }
+        }
+    }
+
+
+    .grove-img1 {
+        grid-row: 1/ span 6;
+        grid-column: 1 / span 6;
+    }
+
+    .grove-img3 {
+        grid-row: 8 / span 6;
+        grid-column: 1 / span 6;
+    }
+
+    .grove-img4 {
+        grid-row: 1 / span 13;
+        grid-column: 8 / span 6;
+    }
+
+    .grove-img2 {
+        grid-row: 1/ span 6;
+        grid-column: 15 / span 6;
+    }
+
+    .grove-img5 {
+        grid-row: 8 / span 10;
+        grid-column: 22 / span 6;
+    }
+    .grove-img6 {
+        grid-row: 1 / span 6;
+        grid-column: 22 / span 6;
+    }
         }
 
-        p{
-            @include p;
-            font-size: 1rem;
-        }
+    
+    .jefferson-section {
+        .jefferson-text {
+            @include project-text-default();
 
+            h3 {
+                @include h3;
+            }
+
+            p {
+                @include p;
+                font-size: 1rem;
+            }
+
+        }
     }
-}
